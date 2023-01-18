@@ -51,5 +51,5 @@ while True:  # Game
         print('You win')
         wins += 1
     else:
-        print('You lose')
+        print('You lost')
         losses += 1
