@@ -55,10 +55,11 @@ def zigzag():
     except KeyboardInterrupt:
         sys.exit()
 
+def main():
+    name = "travis"
+    hello(name)
+    randomNumber = random.randint(1, 9)
+    print(magic8ball(randomNumber))
+    zigzag()
 
-name = "travis"
-hello(name)
-randomNumber = random.randint(1, 9)
-print(magic8ball(randomNumber))
-
-zigzag()
+main()
