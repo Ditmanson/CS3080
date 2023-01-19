@@ -12,8 +12,8 @@ def hi():
 def hello(name):  # say hello and name
     print("Hello, " + name)
 
-
-'''sdfa '''
+#comment 
+'''also comment'''
 def magic8ball(number):
     if number == 1:
         return 'It is certain'
