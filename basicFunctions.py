@@ -13,6 +13,7 @@ def hello(name):  # say hello and name
     print("Hello, " + name)
 
 
+'''sdfa '''
 def magic8ball(number):
     if number == 1:
         return 'It is certain'
