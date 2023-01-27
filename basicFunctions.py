@@ -14,11 +14,7 @@ def hello(name):  # say hello and name
 
 
 # comment
-<<<<<<< HEAD
 '''also comment'''
-=======
-"""also comment"""
->>>>>>> d9a22a9ffdb09adaf13ca614a708af2b642556bf
 
 
 def magic8ball(number):
