@@ -3,6 +3,7 @@ Homework 1
 Name: Ditmanson Travis
 Date: 01-20-2023
 Security Program with Mathy questions'''
+from queue import Empty
 import random
 from re import A
 
@@ -59,7 +60,7 @@ after 4 tries the answer is given'''
 
 
 def findHexFromBinary(binary, hexdecimal):
-    isCorrect = False  # The first truthy falsey value
+    isCorrect = False  
     tries = 0
     while isCorrect == False:
         print("What is the hexadecimal value of " + str(binary))
@@ -144,7 +145,7 @@ def createRandomBinary():
     hundredsPlace = random.randint(0, 1)
     thousandsPlace = random.randint(0, 1)
     return str(onesPlace) + str(tensPlace) + \
-        str(thousandsPlace) + str(thousandsPlace)
+        str(hundredsPlace) + str(thousandsPlace)
 
 
 '''findHexFromDecimal() is the function that is where the user has to convert a hex number from a decimal number'''
@@ -152,7 +153,7 @@ def createRandomBinary():
 
 def findHexFromDecimal(decimal, hexadecimal):
     tries = 0
-    while True:  # another truthy/falsy also another while loop
+    while True:  
         usersHexadecimal = str(input())  # another str() and input()
         if usersHexadecimal == str(hexadecimal):  # another str()
             print("that's correct actually")  # the first print stamtement
@@ -193,6 +194,7 @@ def main():
     decimal = random.randint(17, 30)
     hexadecimal2 = hexFromDecimal(decimal)
     for i in range(10):  # this is to satisfy the main loop to ask three questions using the range function
+        
         if i % 3 != 0:
             # I know I'm not super clever about why to put a continue in the loop, This is just me checking a box...
             continue
@@ -200,18 +202,23 @@ def main():
             print(findHexFromBinary(binary, hexadecimal1))
         elif i == 6:
             print("ok smart guy let's convert " +
-                  str(decimal) + " to hexadecimal")
+                    str(decimal) + " to hexadecimal")
             print("It's ok i'll help you if you cant figure it out")
             findHexFromDecimal(decimal, hexadecimal2)
         elif i == 9:
             print("i can't think of anything clever for floats and lengths that allows me to keep studying assembly")
             print("whats your name")
+            name = Empty
             name = input()
-            if len(name) % 10 != 0:
-                print("The length of your name divided by 10 = " +
-                      str(nameDividedBy10(name)))
-        print("Binary value: " + str(binary) +
-              " \tDecimal value: " + str(decimal))  # well we need something to skip over... also a reminder of the decimal and hexadecimal values is nice
+            if name: #truthy falsey if else 
+                if len(name) % 10 != 0:
+                    print("The length of your name divided by 10 = " +
+                    str(nameDividedBy10(name)))
+                else:
+                    print("i dont think you gave me a name")
+            print("reminders for the conversions values")
+            print("Binary value: " + str(binary) +
+            " \tDecimal value: " + str(decimal))  # well we need something to skip over... also a reminder of the decimal and hexadecimal values is nice
 
 
 # So I made it this way because of CS 1450 and CS 1150. It feels wrong here though..
