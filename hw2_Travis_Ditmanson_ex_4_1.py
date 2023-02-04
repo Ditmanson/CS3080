@@ -11,7 +11,7 @@ LOWER = 1
 UPPER = 20
 
 def guess_number():
-    secret_number = random.randint(LOWER,UPPER)
+    secret_number = random.randint(LOWER,UPPER) #random number is between our lower and upper limits set as constants
     print("I am thinking of a number between %d and %d. You have %d tries." %(LOWER ,UPPER ,TRIES))
     return secret_number
 
@@ -20,12 +20,12 @@ def guessing_game(secret_number):
         while True:
             try:
                 number = int(input())
-                break
+                break #breaks out of the while loop
             except:
                 print("guess a number!")
         if number == (secret_number):
             print("Good Job! You guessed my number in %d guesses!" %(i+1)) #turns out the first time through is try zero
-            return
+            return #exits teh for loop
         elif number>secret_number:
             print ("Your guess is too high")
         elif number<secret_number:
