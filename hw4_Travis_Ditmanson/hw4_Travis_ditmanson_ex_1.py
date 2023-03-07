@@ -37,7 +37,7 @@ class Square (Rectangle):
         self.length = width
     #utilizes parents getter functions
 #circle is child of shape.
-class Circle():
+class Circle(Shape):
     #circle constructor
     def __init__ (self,radius):
         self.radius = radius
@@ -54,12 +54,12 @@ class Circle():
 #r=c/2pi
 def main():
     rectangle = Rectangle(10,20) #declare and initilize rectangle
-    radius = (((rectangle.get_diagonal()/(4*pi)))) # find radius to make circle
+    radius = (((rectangle.get_diagonal()/(2)))) # find radius to make circle
     circle = Circle(radius) # create circle object
     #the rest of this is just so you don't need the debugger to grade
-    print(f'rectangle diangle divided by two: {rectangle.get_diagonal()/2}')
-    print(f'circle radius: {circle.get_radius()}')
-    print(f'circle circum: {circle.get_perimeter()}')
+    #print(f'rectangle diangle divided by two: {rectangle.get_diagonal()/2:.2f}')
+    #print(f'circle radius: {circle.get_radius():.2f}')
+    print(f"Our calculated circle's circumfrence: {circle.get_perimeter():.2f}")
 
 if __name__ == "__main__":
     main()
