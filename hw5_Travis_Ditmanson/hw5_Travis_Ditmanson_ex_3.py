@@ -9,7 +9,7 @@ but won’t consume as much memory.
 '''
 import math
 '''Define a generator called genrange(), which generates the same sequence of values as range(), without creating a list object'''
-
+#set defaults in the parameters
 def genrange(stop, start=0, step=1):
     try:
         for x in range(start, stop, step):
