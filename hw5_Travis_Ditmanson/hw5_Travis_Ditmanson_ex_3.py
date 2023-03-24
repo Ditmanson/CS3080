@@ -10,12 +10,17 @@ but won’t consume as much memory.
 import math
 '''Define a generator called genrange(), which generates the same sequence of values as range(), without creating a list object'''
 #set defaults in the parameters
-def genrange(stop, start=0, step=1):
-    try:
-        for x in range(start, stop, step):
-            yield x
-    except:
-        pass
+# def genrange(stop, start=0, step=1):
+#     try:
+#         for x in range(start, stop, step):
+#             yield x
+#     except:
+#         pass
+def genrange(stop, start=0, step=1):  # Default parameters
+    while start < stop:  # while start is less than stop
+        yield start  # yield start
+        start += step  # increment start by step
+
 def main():
     test_range_one=genrange(5)
     test_range_two=genrange(10,5)

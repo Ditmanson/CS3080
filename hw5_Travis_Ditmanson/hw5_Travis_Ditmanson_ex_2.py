@@ -6,7 +6,7 @@ Use a generator function or generator experssion to find first n pythagorean tri
 A pythagorean triplet is one where x^2 + y^2 = z^2 and none of the integers are zero
 '''
 import math
-
+import sys
 def pythagorean_triplets(n):
     #seq = iter(seq)
     #result = []
@@ -22,10 +22,10 @@ def pythagorean_triplets(n):
 
 
 def main():
-    print("Starting")
-    pythagorean_triplet=pythagorean_triplets(69)
-    for triplet in pythagorean_triplet:
-        print(triplet)
-
+    pythagorean_triplet=pythagorean_triplets(29)
+    print(f'pythagorean_triplet type({type(pythagorean_triplet)}) starting look for triplets' )
+    for pyt in pythagorean_triplet:
+        print(pyt)
+        
 if __name__ == "__main__":
     main()

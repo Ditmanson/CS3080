@@ -9,8 +9,7 @@ plt.ylabel('Profit in dollar')
 plt.xticks(monthList)
 plt.title('Company profit per month')
 plt.yticks([100000,200000,300000,400000,500000])
-plt.plot(monthList, profitList, label='MonthWise profit data of last year',
-         color ='r')
+plt.plot(monthList, profitList, label='MonthWise profit data of last year')
 #print(csv_file)
 plt.show()
 
