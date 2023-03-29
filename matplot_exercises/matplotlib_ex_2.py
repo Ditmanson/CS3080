@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 csv_file = pd.read_csv('company_sales_data.csv')
 profitList = csv_file ['total_profit'].tolist()
 monthList= csv_file['month_number'].tolist()
