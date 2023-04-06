@@ -29,8 +29,9 @@ def save_clipboard_text(keyword):
 
 def list_clipboard_text():
     mcbShelf = shelve.open('mcb')
-    pyperclip.copy(mcbShelf.keys())
+    pyperclip.copy(str(list(mcbShelf.keys())))
     mcbShelf.close()
+
 def copy_clipboard_text(keyword):
     mcbShelf = shelve.open('mcb')
     if keyword in mcbShelf:
@@ -38,16 +39,19 @@ def copy_clipboard_text(keyword):
     mcbShelf.close()
 
 def check_script_arguments():
-    if len(sys.argv) == 3:
-        if sys.argv[1].lower() == 'save':
+    if len(sys.argv) == 3 and sys.argv[1].lower() == 'save':
             save_clipboard_text(sys.argv[2])
-        else:
-            print('Invalid command line argument')
-    elif len(sys.argv) == 2:
-        if sys.argv[1].lower() == 'list':
+    elif len(sys.argv) ==2:
+        if  sys.argv[1].lower() == 'list':
             list_clipboard_text()
         else:
             copy_clipboard_text(sys.argv[1])
     else:
         print('Invalid command line argument')
+
+def main():
+    check_script_arguments()
+
+if __name__ == "__main__":
+    main()
 
