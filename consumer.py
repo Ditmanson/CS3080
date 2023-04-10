@@ -9,7 +9,7 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(lineno)d - %(message)s')
 # uncomment this line to suppress debug msg
-#logging.disable(logging.DEBUG)
+logging.disable(logging.DEBUG)
 
 
 def consumer(id, q):
